@@ -6,7 +6,7 @@ public class User {
     private String lastName;
     private String email;
     private String password;
-    private String avatarURL;
+    private String avatarPath;
 
     public long getId() {
         return id;
@@ -48,11 +48,11 @@ public class User {
         this.password = password;
     }
 
-    public String getAvatarURL() {
-        return avatarURL;
+    public String getAvatarPath() {
+        return avatarPath;
     }
 
-    public void setAvatarURL(String avatarURL) {
-        this.avatarURL = avatarURL;
+    public void setAvatarPath(String avatarPath) {
+        this.avatarPath = avatarPath;
     }
 }
