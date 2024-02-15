@@ -15,16 +15,21 @@ public class RegistrationController {
     private UserServices userServices;
 
     @GetMapping("/registration") //endpoint to GET registration form
-    public String getRegistrationForm(Model model){
+    public String getRegistrationForm(Model model) {
         model.addAttribute("newUser", new User());
         return "registration";
     }
 
     @PostMapping("/registration")
-    public String saveUser(@ModelAttribute User user, Model model){
+    public String saveUser(@ModelAttribute User user, Model model) {
         userServices.saveUserData(user);
         model.addAttribute("firstName", user.getFirstName());
         model.addAttribute("lastName", user.getLastName());
         return "successRegistration";
+    }
+
+    @GetMapping("/login")
+    public String getLoginPage() {
+        return "loginPage";
     }
 }
