@@ -6,9 +6,9 @@ public class Ticket {
     private String summary;
     private String description;
     private int status;
-    private int reporterId;
+    private long reporterId;
     private int assigneeId;
-    private int projectId;
+    private long projectId;
     private String ticketType;
     private int sprintId;
     private long labelId;
@@ -48,11 +48,11 @@ public class Ticket {
         this.status = status;
     }
 
-    public int getReporterId() {
+    public long getReporterId() {
         return reporterId;
     }
 
-    public void setReporterId(int reporterId) {
+    public void setReporterId(long reporterId) {
         this.reporterId = reporterId;
     }
 
@@ -64,11 +64,11 @@ public class Ticket {
         this.assigneeId = assigneeId;
     }
 
-    public int getProjectId() {
+    public long getProjectId() {
         return projectId;
     }
 
-    public void setProjectId(int projectId) {
+    public void setProjectId(long projectId) {
         this.projectId = projectId;
     }
 
