@@ -1,6 +1,6 @@
 package com.app.services;
 
-import com.app.dao.TicketsDao;
+import com.app.dao.TicketsDAO;
 import com.app.model.Ticket;
 import com.app.model.User;
 import com.app.security.CustomUserDetails;
@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 public class TicketServices {
     @Autowired
-    private TicketsDao ticketsDao;
+    private TicketsDAO ticketsDao;
 
     public void storeNewTicket(Ticket ticket) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -30,6 +30,10 @@ public class TicketServices {
 
     public List<Ticket> getTicketsByProject(long projectId) {
         return ticketsDao.getTicketsByProject(projectId);
+    }
+
+    public List<Ticket> getLastTickets(int count){
+        return ticketsDao.getLastTickets(count);
     }
 
 }
