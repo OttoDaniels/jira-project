@@ -21,5 +21,4 @@ public class MainController {
         model.addAttribute("tickets", ticketServices.getLastTickets(30));
         return "homePage";
     }
-
 }
