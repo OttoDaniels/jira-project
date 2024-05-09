@@ -9,6 +9,15 @@
     <script src="/javascript/main.js" defer></script>
 </head>
 <body>
+    <div>Summary:</div>
+    <div th:text="${ticket.summary}"></div>
+    <div>Description</div>
+    <div th:text="${ticket.description}"></div>
+    <div>Assignee</div>
+    <div th:text="${ticket.user.firstName + ' ' + ticket.user.lastName}"></div>
+    <a th:href="'/ticket/edit/' + ${ticket.id}">Edit</a>
+
+
     <div onclick="getUsers();">SHOW ALL USERS</div>
     <div id="user-list"></div>
 

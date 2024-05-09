@@ -6,6 +6,7 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.web.HttpSecurityBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -37,6 +38,7 @@ public class WebSecurityConfig {
         http.authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/registration", "/css/**", "js/**").permitAll()   //all users have permissions to register
                         .anyRequest().authenticated())
+                .csrf(AbstractHttpConfigurer :: disable) //this is needed to upload a file
                 .formLogin(form -> form.loginPage("/login").permitAll());   //all users have permissions to login
 
         return http.build();

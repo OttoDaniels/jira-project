@@ -36,4 +36,12 @@ public class TicketServices {
         return ticketsDao.getLastTickets(count);
     }
 
+    public Ticket getTicketById (long id){
+        return ticketsDao.getTicketById(id);
+    }
+
+    public void updateTicket(Ticket ticket){
+        ticketsDao.updateTicket(ticket);
+    }
+
 }

@@ -21,11 +21,11 @@ public class UserServices {
         userDAO.saveUserData(user);
     }
 
-    public List<User>getAllUsers(){
+    public List<User> getAllUsers() {
         return userDAO.getAllUsers();
     }
 
-    public List<User> getAllUsersStartingWith(String startsWith){
+    public List<User> getAllUsersStartingWith(String startsWith) {
         return userDAO.getAllUsersStartingWith(startsWith);
     }
 
