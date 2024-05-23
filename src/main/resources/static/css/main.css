@@ -94,3 +94,29 @@ background-color:background-color: #d0cacb
 .header{
     font-size: 18px;
 }
+
+.user-header{
+}
+
+.user-card{
+display: flex;
+justify-content: flex-end;
+margin-bottom: 20px;
+}
+
+.avatar{
+background-color: #999;
+color: black;
+width: 25px;
+height: 25px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 17px;
+}
+
+.user-name{
+display: flex;
+margin-left: 10px;
+margin-top: 5px;
+}
