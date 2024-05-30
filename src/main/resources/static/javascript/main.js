@@ -29,5 +29,13 @@ function getUsers() {
     }
  });
 
+ function openModal(){
+    document.getElementById("modal").style.display = "block"; //open modal window
+ }
+
+ function closeModal(){
+    document.getElementById("modal").style.display = "none"; //close modal window
+ }
+
 
 
