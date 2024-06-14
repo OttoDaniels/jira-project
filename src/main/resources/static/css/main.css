@@ -144,10 +144,11 @@ input::placeholder{
 }
 
 .upload-form{
-    display: flex;
-    justify-content: center;
-    height: 100px;
-    backdrop-filter: blur(2px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        backdrop-filter: blur(3px);
 }
 
 .upload-btn{
@@ -160,6 +161,10 @@ input::placeholder{
 }
 
 .custom-file-input{
+    color: #84bdf2;
+    font-family: cursive;
+    margin-right: 25px;
+    cursor: pointer;
 }
 
 .file-input{
@@ -168,4 +173,22 @@ display: none;
 
 .avatar-img{
 width: 95%;
+}
+
+.bookmark-header{
+width:100%;
+}
+
+.bookmark-icon{
+    width: 20px;
+    cursor: pointer;
+}
+.bookmark-counter-icon{
+}
+.bookmarks-counter{
+    margin-left: 3px;
+}
+.bookmarks{
+    display: flex;
+    align-items: center;
 }

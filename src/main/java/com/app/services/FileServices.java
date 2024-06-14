@@ -34,7 +34,7 @@ public class FileServices {
         copyFileToDirectory(file);
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        CustomUserDetails customUser = (CustomUserDetails) authentication.getPrincipal();
+        CustomUserDetails customUser = (CustomUserDetails) authentication.getPrincipal(); //returns current user
 
         userDAO.storeUserAvatar(file.getOriginalFilename(), customUser.getUser().getId());
 
